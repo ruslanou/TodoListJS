@@ -22,7 +22,7 @@ function getTodos() {
         todos = JSON.parse(localStorage.getItem('todos'));
     }
 
-    todos.forEach(function(todo) {
+    todos.forEach(todo => {
         const li = document.createElement('li');
         li.className = 'collection-item';
         li.appendChild(document.createTextNode(todo));
@@ -87,7 +87,7 @@ function removeTodoFromLocalStorage(todoItem) {
         todos = JSON.parse(localStorage.getItem('todos'));
     }
 
-    todos.forEach(function(todo, index) {
+    todos.forEach((todo, index) => {
         if(todoItem.textContent === todo){
             todos.splice(index, 1);
         }
